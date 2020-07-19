@@ -1,31 +1,30 @@
 import React from "react";
+import { BrowserRouter } from "react-router-dom";
 
 import Header from "../../components/Header";
+
 import Aside from "../../components/Aside";
 import Footer from "../../components/Footer";
+
+import Routes from "../../routes";
+import GlobalStyle from "../../styles/global";
 
 import * as s from "./styles";
 
 function Main() {
   return (
     <>
-      <Header />
-
       <s.Container>
-        <Aside>Barra Lateral</Aside>
-        <s.Body>
-          <s.Title>Cadastro</s.Title>
-          <s.Form>
-            <input type="text" placeholder="Nome" />
-            <input type="text" placeholder="Email" />
-            <input type="text" placeholder="Telefone" />
-
-            <s.ButtonSubmit>Cadastrar</s.ButtonSubmit>
-          </s.Form>
-        </s.Body>
+        <BrowserRouter>
+          <Aside>Barra Lateral</Aside>
+          <s.Conteudo>
+            <Header />
+            <Routes />
+            <GlobalStyle />
+            <Footer />
+          </s.Conteudo>
+        </BrowserRouter>
       </s.Container>
-
-      <Footer />
     </>
   );
 }

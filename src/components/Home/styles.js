@@ -37,7 +37,23 @@ export const Title = styled.p`
   text-align: left;
 `;
 
-export const Form = styled.form`
+export const Paragraph = styled.p`
+  font-size: 1.2em;
+  text-align: left;
+  color: #727272;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 15px;
+
+  span {
+    font-weight: 800;
+    font-size: 1.4em;
+    text-align: left;
+    color: #fd8468;
+  }
+`;
+
+export const BodyParagraph = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,15 +63,6 @@ export const Form = styled.form`
   border-radius: 5px;
   padding: 20px 10px;
   margin: 10px auto 20px auto;
-
-  input {
-    padding: 12px;
-    width: 80%;
-    border: 0.5px #f5f5f5 solid;
-    margin: 10px auto;
-    font-size: 1.2em;
-    border-radius: 5px;
-  }
 `;
 
 export const ButtonSubmit = styled.button`

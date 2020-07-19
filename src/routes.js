@@ -1,16 +1,18 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router";
 
-import Main from "./pages/Main";
+import Home from "./components/Home";
 import Login from "./pages/Login";
+import Cadastrar from "./components/Cadastrar";
+import Simular from "./components/Simular";
 
 export default function Routes() {
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route path="/" exact component={Main} />
-        <Route path="/Login" component={Login} />
-      </Switch>
-    </BrowserRouter>
+    <Switch>
+      <Route path="/" exact component={Home} />
+      <Route path="/Cadastrar" component={Cadastrar} />
+      <Route path="/Simular" component={Simular} />
+      <Route path="/Login" component={Login} />
+    </Switch>
   );
 }
