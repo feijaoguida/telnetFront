@@ -13,7 +13,7 @@ function Header() {
         </s.Logo>
         <s.Menu>
           <s.Linked to="/">Home</s.Linked>
-          <s.Linked to="/Sadastrar">Cadastrar Planos</s.Linked>
+          <s.Linked to="/Cadastrar">Cadastrar Planos</s.Linked>
           <s.Linked to="/Simular">Simular Planos</s.Linked>
         </s.Menu>
       </s.Top>

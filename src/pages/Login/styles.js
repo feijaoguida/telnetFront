@@ -86,6 +86,14 @@ export const FormikField = styled(Field)`
   margin: 5px auto;
   font-size: 1.2em;
   border-radius: 5px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.25);
+  transition: all 0.1s linear;
+
+  :focus {
+    outline: none;
+    box-shadow: 0 4px 4px rgba(255, 255, 255, 0.5);
+  }
 `;
 
 export const FormikErrorMessage = styled(ErrorMessage)`

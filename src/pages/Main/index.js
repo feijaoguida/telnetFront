@@ -6,7 +6,7 @@ import Header from "../../components/Header";
 import Aside from "../../components/Aside";
 import Footer from "../../components/Footer";
 
-import Routes from "../../routes";
+import RoutesNew from "../../routesNew";
 import GlobalStyle from "../../styles/global";
 
 import * as s from "./styles";
@@ -14,13 +14,13 @@ import * as s from "./styles";
 function Main() {
   return (
     <>
+      <GlobalStyle />
       <s.Container>
         <BrowserRouter>
           <Aside>Barra Lateral</Aside>
           <s.Conteudo>
             <Header />
-            <Routes />
-            <GlobalStyle />
+            <RoutesNew />
             <Footer />
           </s.Conteudo>
         </BrowserRouter>
