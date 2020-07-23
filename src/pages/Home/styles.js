@@ -1,25 +1,5 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  min-height: 100vh;
-  max-height: 100vh;
-`;
-
-export const Conteudo = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: 80%;
-
-  overflow-y: scroll;
-  position: relative;
-  flex: 1 1 0%;
-`;
-
 export const Body = styled.div`
   background-color: #f5f5f5;
   display: flex;

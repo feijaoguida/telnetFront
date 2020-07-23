@@ -7,6 +7,8 @@ import * as s from "./styles";
 
 import image from "../../assets/password.svg";
 
+import LoginContainer from "../Layout/Login";
+
 const validations = yup.object().shape({
   user: yup
     .string()
@@ -32,34 +34,36 @@ const enhanceWithFormik = withFormik({
 
 const Login = (props) => {
   return (
-    <s.Container>
-      <s.ContainerLeft>
-        <s.bodyLeft>
-          <p>TelNet</p>
-          <span>Levando qualidade com um preço que cabe no seu bolso.</span>
-          <img src={image} alt="" />
-        </s.bodyLeft>
-      </s.ContainerLeft>
-      <s.ContainerRight>
-        <s.Title>Faça seu Login:</s.Title>
+    <LoginContainer>
+      <s.Container>
+        <s.ContainerLeft>
+          <s.bodyLeft>
+            <p>TelNet</p>
+            <span>Levando qualidade com um preço que cabe no seu bolso.</span>
+            <img src={image} alt="" />
+          </s.bodyLeft>
+        </s.ContainerLeft>
+        <s.ContainerRight>
+          <s.Title>Faça seu Login:</s.Title>
 
-        <s.FormikForm>
-          <div className="Form-Group">
-            <s.FormikField name="user" placeholder="Usuário" type="text" />
-            <s.FormikErrorMessage component="span" name="user" />
-          </div>
-          <div className="Form-Group">
-            <s.FormikField
-              name="password"
-              placeholder="Senha"
-              type="password"
-            />
-            <s.FormikErrorMessage component="span" name="password" />
-          </div>
-          <s.ButtonSubmit type="submit">Logar</s.ButtonSubmit>
-        </s.FormikForm>
-      </s.ContainerRight>
-    </s.Container>
+          <s.FormikForm>
+            <div className="Form-Group">
+              <s.FormikField name="user" placeholder="Usuário" type="text" />
+              <s.FormikErrorMessage component="span" name="user" />
+            </div>
+            <div className="Form-Group">
+              <s.FormikField
+                name="password"
+                placeholder="Senha"
+                type="password"
+              />
+              <s.FormikErrorMessage component="span" name="password" />
+            </div>
+            <s.ButtonSubmit type="submit">Logar</s.ButtonSubmit>
+          </s.FormikForm>
+        </s.ContainerRight>
+      </s.Container>
+    </LoginContainer>
   );
 };
 
