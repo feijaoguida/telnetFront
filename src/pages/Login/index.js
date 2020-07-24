@@ -61,6 +61,7 @@ const Login = (props) => {
             </div>
             <s.ButtonSubmit type="submit">Logar</s.ButtonSubmit>
           </s.FormikForm>
+          <s.Linked to="/registrar">Faça o seu registro.</s.Linked>
         </s.ContainerRight>
       </s.Container>
     </LoginContainer>

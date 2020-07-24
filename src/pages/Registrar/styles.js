@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 import { ErrorMessage, Form, Field } from "formik";
 
@@ -31,7 +30,7 @@ export const ContainerLeft = styled.div`
   }
 `;
 
-export const bodyLeft = styled.div`
+export const bodyRegisterLeft = styled.div`
   color: #6c7a89;
   text-align: center;
 
@@ -122,11 +121,4 @@ export const ButtonSubmit = styled.button`
   font-size: 1.2em;
   margin: 5px auto;
   border-radius: 5px;
-`;
-
-export const Linked = styled(Link)`
-  text-decoration: none;
-  color: #000;
-  font-size: 1.2em;
-  margin: 0 5px;
 `;

@@ -13,21 +13,6 @@ const validations = yup.object().shape({
   period: yup.string().required("Informe um valor para o tempo!"),
 });
 
-/* const enhanceWithFormik = withFormik({
-  mapPropsToValues: () => ({
-    description: "",
-    tempo: "",
-  }),
-
-  //onSubmit={values => alert(JSON.stringify(values, null, 2))}
-
-  validateOnChange: true,
-  validateOnBlur: true,
-  displayName: "CadastrarPlano",
-  validationSchema: validations,
-  onSubmit: handleSubmit,
-}); */
-
 function CadastrarPlano() {
   const history = useHistory();
 
