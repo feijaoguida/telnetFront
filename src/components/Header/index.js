@@ -15,6 +15,8 @@ function Header() {
           <s.Linked to="/">Home</s.Linked>
           <s.Linked to="/planos">Planos</s.Linked>
           <s.Linked to="/simular">Simular</s.Linked>
+          <s.Linked to="/registrar">Registrar</s.Linked>
+          <s.Linked to="/login">Login</s.Linked>
         </s.Menu>
       </s.Top>
     </s.Container>
