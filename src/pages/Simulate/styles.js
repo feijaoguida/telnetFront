@@ -37,15 +37,21 @@ export const Title = styled.p`
   font-weight: 800;
   font-size: 2.5em;
   text-align: left;
+  padding: 0.5em 0;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
 `;
 
 export const FormikField = styled(Field)`
   padding: 5px;
-  width: 80%;
+  width: 90%;
   border: none;
   margin: 5px auto;
   font-size: 1.2em;
   border-radius: 5px;
+
+  :hover {
+  }
 `;
 
 export const FormikErrorMessage = styled(ErrorMessage)`
@@ -62,14 +68,14 @@ export const FormikForm = styled(Form)`
   border-radius: 5px;
   padding: 20px 10px;
   margin: 10px auto 20px auto;
+`;
 
-  .Form-Group {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
+export const FormGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 `;
 
 export const Fields = styled.div`
@@ -77,6 +83,8 @@ export const Fields = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  margin: 30px auto;
 `;
 
 export const ButtonSubmit = styled.button`
@@ -87,4 +95,32 @@ export const ButtonSubmit = styled.button`
   font-size: 1.2em;
   margin: 5px auto;
   border-radius: 5px;
+`;
+
+export const Card = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px 10px;
+  margin: 10px auto 20px auto;
+`;
+
+export const Alert = styled.span`
+  font-size: 1.2em;
+  color: Red;
+`;
+
+export const Description = styled.div`
+  margin: 10px auto;
+  display: flex;
+  flex-direction: row;
+
+  p {
+    margin: auto 20px;
+    font-size: 1.2em;
+  }
 `;

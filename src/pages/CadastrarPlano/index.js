@@ -27,31 +27,31 @@ function CadastrarPlano() {
   return (
     <Main>
       <s.Body>
-        <s.Title>Cadastrar Plano.</s.Title>
         <Formik
           initialValues={{ description: "", period: "" }}
           onSubmit={handleSubmit}
           validationSchema={validations}
         >
           <s.FormikForm>
+            <s.Title>Cadastrar Plano.</s.Title>
             <s.Fields>
-              <div className="Form-Group">
+              <s.FormGroup>
                 <s.FormikField
                   name="description"
                   type="text"
                   placeholder="Descrição"
                 />
                 <s.FormikErrorMessage component="span" name="description" />
-              </div>
+              </s.FormGroup>
 
-              <div className="Form-Group">
+              <s.FormGroup>
                 <s.FormikField
                   name="period"
                   type="text"
                   placeholder="Tempo"
                 ></s.FormikField>
                 <s.FormikErrorMessage component="span" name="period" />
-              </div>
+              </s.FormGroup>
             </s.Fields>
             <s.ButtonSubmit type="submit">Cadastrar</s.ButtonSubmit>
           </s.FormikForm>

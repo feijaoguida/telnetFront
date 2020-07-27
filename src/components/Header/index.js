@@ -13,8 +13,9 @@ function Header() {
         </s.Logo>
         <s.Menu>
           <s.Linked to="/">Home</s.Linked>
-          <s.Linked to="/planos">Planos</s.Linked>
           <s.Linked to="/simular">Simular</s.Linked>
+          <s.Linked to="/planos">Planos</s.Linked>
+          <s.Linked to="/tarifas">Tarifas</s.Linked>
           <s.Linked to="/registrar">Registrar</s.Linked>
           <s.Linked to="/login">Login</s.Linked>
         </s.Menu>

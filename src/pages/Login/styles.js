@@ -73,8 +73,9 @@ export const ContainerRight = styled.div`
 export const Title = styled.p`
   color: #fff;
   text-align: center;
-  font-size: 3em;
+  font-size: 2.5em;
   font-weight: 800;
+  margin: 20px 0;
 `;
 
 export const FormikForm = styled(Form)`
@@ -104,9 +105,10 @@ export const FormikField = styled(Field)`
   background-color: rgba(255, 255, 255, 0.25);
   transition: all 0.1s linear;
 
-  :focus {
+  :focus,
+  :hover {
     outline: none;
-    box-shadow: 0 4px 4px rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5);
   }
 `;
 
@@ -116,17 +118,22 @@ export const FormikErrorMessage = styled(ErrorMessage)`
 
 export const ButtonSubmit = styled.button`
   color: #fff;
-  padding: 5px 15px;
-  background-color: #000;
+  padding: 15px 15px;
+  background-color: #434343;
   border: none;
   font-size: 1.2em;
   margin: 5px auto;
   border-radius: 5px;
+  width: 40%;
+
+  :hover {
+    background-color: #000;
+  }
 `;
 
 export const Linked = styled(Link)`
   text-decoration: none;
   color: #000;
   font-size: 1.2em;
-  margin: 0 5px;
+  margin: 15px auto;
 `;
