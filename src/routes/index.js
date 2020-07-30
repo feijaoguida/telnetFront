@@ -18,13 +18,11 @@ export default function Routes() {
     <BrowserRouter>
       <Switch>
         <Route path="/" exact component={Home} isPrivate />
-        <Route path="/login" component={Login} isPrivate />
-        <Route path="/registrar" component={Registrar} isPrivate />
+        <Route path="/login" component={Login} />
+        <Route path="/registrar" component={Registrar} />
         <Route path="/cadastrarplano" component={CadastrarPlano} isPrivate />
         <Route path="/planos" component={ListarPlano} isPrivate />
-
         <Route path="/simular" component={Simular} isPrivate />
-
         <Route path="/cadastrartarifa" component={CadastrarTarifa} isPrivate />
         <Route path="/tarifas" component={ListarTarifa} isPrivate />
       </Switch>

@@ -6,6 +6,7 @@ import * as s from "./styles";
 import api from "../../services/api";
 
 import Main from "../Layout/Main";
+import { getToken } from "../../services/auth";
 
 const validations = yup.object().shape({
   idTariff: yup.string().required("Informa a Origem!"),
@@ -14,20 +15,28 @@ const validations = yup.object().shape({
 });
 
 function Simulate() {
+  const token = getToken();
   const [simulates, setSimulate] = useState("");
   const [tariff, setTariff] = useState([]);
   const [plans, setPlans] = useState([]);
 
   useEffect(() => {
     async function loadTariff() {
-      const response = await api.get("/tariff");
-
+      const response = await api.get("/tariff", {
+        headers: {
+          Authorization: "Bearer " + token,
+        },
+      });
       setTariff(response.data);
     }
     loadTariff();
 
     async function loadPlans() {
-      const response = await api.get("/plans");
+      const response = await api.get("/plans", {
+        headers: {
+          Authorization: "Bearer " + token,
+        },
+      });
 
       setPlans(response.data);
     }
@@ -36,11 +45,12 @@ function Simulate() {
 
   async function handleSubmit(values) {
     try {
-      console.log(values);
-      const response = await api.post("/simulacao", values);
-
+      const response = await api.post("/simulacao", values, {
+        headers: {
+          Authorization: "Bearer " + token,
+        },
+      });
       setSimulate(response.data);
-      console.log(simulates);
     } catch (err) {
       alert("Erro ao fazer a Simulação, tente novamente.");
     }

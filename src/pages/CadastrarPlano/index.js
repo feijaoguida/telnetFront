@@ -7,6 +7,7 @@ import api from "../../services/api";
 import Main from "../Layout/Main";
 
 import * as s from "./styles";
+import { getToken } from "../../services/auth";
 
 const validations = yup.object().shape({
   description: yup.string().required("Informa uma descrição!"),
@@ -14,11 +15,16 @@ const validations = yup.object().shape({
 });
 
 function CadastrarPlano() {
+  const token = getToken();
   const history = useHistory();
 
   async function handleSubmit(values) {
     try {
-      await api.post("plans/", values);
+      await api.post("plans/", values, {
+        headers: {
+          Authorization: "Bearer " + token,
+        },
+      });
       history.push("/planos");
     } catch (err) {
       alert("Erro ao cadastrar o Plano, tente novamente.");

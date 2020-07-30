@@ -1,11 +1,14 @@
 import React from "react";
-
+import { useHistory } from "react-router-dom";
 import * as yup from "yup";
 import { Formik } from "formik";
 
 import * as s from "./styles";
 import image from "../../assets/password.svg";
 import LoginContainer from "../Layout/Login";
+import api from "../../services/api";
+
+import { login } from "../../services/auth";
 
 const validations = yup.object().shape({
   email: yup
@@ -19,14 +22,17 @@ const validations = yup.object().shape({
 });
 
 function Login() {
+  const history = useHistory();
+
   async function handleSubmit({ email, password }) {
     console.log(email, password);
-    //try {
-    //await api.post("/user", values);
-    //history.push("/login");
-    //} catch (err) {
-    //  alert("Erro ao cadastrar o usuário, tente novamente.");
-    // }
+    try {
+      const response = await api.post("/session", { email, password });
+      login(response.data.token);
+      history.push("/");
+    } catch (err) {
+      alert("Houve um problema com o login, verifique suas credenciais. T.T");
+    }
   }
 
   return (

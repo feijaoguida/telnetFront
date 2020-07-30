@@ -4,6 +4,8 @@ import * as s from "./styles";
 
 import imgLogo from "../../assets/rocket_launch.svg";
 
+import { logout } from "../../services/auth";
+
 function Header() {
   return (
     <s.Container>

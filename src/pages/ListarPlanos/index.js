@@ -5,20 +5,35 @@ import { FiTrash2 } from "react-icons/fi";
 import * as s from "./styles";
 import Main from "../Layout/Main";
 import api from "../../services/api";
+import { getToken } from "../../services/auth";
 
 const ListarPlanos = (props) => {
+  const token = getToken();
   const [plans, setPlans] = useState([]);
 
   useEffect(() => {
-    api.get("plans").then((response) => {
-      setPlans(response.data);
-    });
+    try {
+      api
+        .get("plans", {
+          headers: {
+            Authorization: "Bearer " + token,
+          },
+        })
+        .then((response) => {
+          setPlans(response.data);
+        });
+    } catch (err) {
+      alert("Não foi possível listar os planos, tente novamente." + err);
+    }
   });
 
   async function handleDeletePlan(id) {
     try {
-      await api.delete(`plans/${id}`);
-
+      await api.delete(`plans/${id}`, {
+        headers: {
+          Authorization: token,
+        },
+      });
       setPlans(plans.filter((plan) => plan.id !== id));
     } catch (err) {
       alert("Erro ao deletar o Plano, tente novamente.");
