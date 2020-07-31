@@ -41,7 +41,7 @@ function Simulate() {
       setPlans(response.data);
     }
     loadPlans();
-  }, []);
+  }, [token]);
 
   async function handleSubmit(values) {
     try {
