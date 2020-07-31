@@ -54,3 +54,12 @@ export const Linked = styled(Link)`
   font-size: 1.2em;
   margin: 0 5px;
 `;
+
+export const ButtonLink = styled.button`
+  text-decoration: none;
+  color: #000;
+  font-size: 1.2em;
+  margin: 0 5px;
+  border: none;
+  background-color: #fff !important;
+`;
